@@ -1,28 +1,21 @@
-import _ from 'lodash';
-import './css/style.css';
-import RiRi from './img/ri.jpeg'
-import Data from './xml/data.xml'
+import riCreate from './js/index'
+import printShit from './js/print'
 
-//just to show how various shit works
 function component() {
-
-  console.log(Data)
-
   let element = document.createElement('div');
+  let btn = document.createElement('button');
 
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+  btn.innerHTML = 'Click me!';
+  btn.onclick = printShit;
 
-  let riri = new Image();
-  riri.src = RiRi;
+  // conole.log('hit')
 
-  let br = document.createElement('br')
-
-  element.appendChild(br);
-
-  element.appendChild(riri);
+  element.appendChild(btn);
 
   return element;
 }
 
-//document.body.appendChild(component());
+printShit();
+document.body.appendChild(component());
+
+document.body.appendChild(riCreate());
