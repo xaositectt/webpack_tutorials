@@ -1,0 +1,15 @@
+stuff to research:
+
+sorting of script tags: there are many different methods.
+
+lazy loads of imports
+
+checkout all the plugins
+
+common chunks plugin- define the commonly used modules
+
+DefinePlugin to define constants
+
+all the different module methods
+
+

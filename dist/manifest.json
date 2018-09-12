@@ -1,4 +1,9 @@
 {
-  "app.js": "app.bundle.js",
-  "../index.html": "../index.html"
+  "app.js": "js/app.59f0801a6e2290da181d.js",
+  "app.js.map": "js/app.59f0801a6e2290da181d.js.map",
+  "vendors.js": "js/vendors.28b5be787f2c29603b02.js",
+  "vendors.js.map": "js/vendors.28b5be787f2c29603b02.js.map",
+  "runtime.js": "js/runtime.38a65e3ed00a3fb765b4.js",
+  "runtime.js.map": "js/runtime.38a65e3ed00a3fb765b4.js.map",
+  "index.html": "index.html"
 }

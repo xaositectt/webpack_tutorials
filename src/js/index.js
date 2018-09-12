@@ -1,12 +1,8 @@
 import _ from 'lodash';
-import '../css/style.css';
 import RiRi from '../img/ri.jpeg'
-import Data from '../xml/data.xml'
 
 //just to show how various shit works
 export default function component() {
-
-  console.log(Data)
 
   let element = document.createElement('div');
 

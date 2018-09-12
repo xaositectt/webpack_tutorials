@@ -1,0 +1,59 @@
+var path = require('path');
+
+module.exports = {
+  contentBase: path.join(__dirname, 'dist'),
+  // it's possible to serve from multiple sources
+  // contentBase: [path.join(__dirname, 'public'), path.join(__dirname, 'assets')]
+  port: 3000,
+  // enables hot module replacement
+  hot: true,
+  // default is http but you can use https
+  // https: true,
+  // add the header to every response
+  headers: {
+    'name': 'Rihanna'
+  },
+  // custom middleware functions before all other middleware functions
+  before: function(app) {
+    // this is the app object of the webpack express app
+    // console.log(app)
+    console.log('loading frontend app...')
+  },
+  setup: function(app) {
+    app.get('/something', function (req, res) {
+      res.json({
+        custom: 'response'
+      });
+    })
+  },
+  after: function(app) {
+    app.get('/status', function (req, res) {
+      // console.log(res.req)
+      console.log('this is a basic info json on the /status url')
+      console.log('url is: localhost' + res.req.url)
+      console.log('method: ' + res.req.method)
+      res.json({
+        status: 'loaded',
+        subject: 'Rihanna'
+      })
+    })
+  },
+  // control display information
+  // stats: 'minimal',
+  // enables gzip compression
+  compress: true,
+  // the devserver will open the browser if it's closed
+  open: true,
+  // specify the opening page
+  openPage: '',
+  // displays a full screen overlay in the browser
+  overlay: {
+    warnings: true,
+    errors: true
+  },
+  // the allowed hosts that can access the server
+  allowedHosts: [
+    '.host.com',
+    'host2.com'
+  ]
+}
